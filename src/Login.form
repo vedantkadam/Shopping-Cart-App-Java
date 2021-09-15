@@ -49,27 +49,32 @@
               <Group type="102" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="bSubmit" min="-2" pref="108" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jPasswordField1" min="-2" pref="254" max="-2" attributes="0"/>
-                              <Component id="jTextField1" min="-2" pref="254" max="-2" attributes="0"/>
-                              <Component id="tUsername" min="-2" pref="153" max="-2" attributes="0"/>
-                              <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="tPassword" min="-2" pref="153" max="-2" attributes="0"/>
-                              <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="pPassword_Field" min="-2" pref="254" max="-2" attributes="0"/>
+                                      <Component id="fUsername_field" min="-2" pref="254" max="-2" attributes="0"/>
+                                      <Component id="tUsername" min="-2" pref="153" max="-2" attributes="0"/>
+                                      <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tPassword" min="-2" pref="153" max="-2" attributes="0"/>
+                                      <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                                  <Component id="button1" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                                  <Component id="ilogin_small" min="-2" pref="153" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="153" max="-2" attributes="0"/>
+                          <EmptySpace pref="84" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="96" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -77,22 +82,22 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jPanel2" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" pref="143" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="ilogin_small" min="-2" pref="153" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="tUsername" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jTextField1" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="fUsername_field" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Component id="tPassword" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jPasswordField1" min="-2" pref="61" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="button1" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="pPassword_Field" min="-2" pref="61" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  <Component id="bSubmit" min="-2" pref="55" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -116,24 +121,34 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="ilogin_image" min="-2" pref="526" max="-2" attributes="0"/>
-                          <Component id="tShopping_cart" min="-2" pref="490" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tShopping_cart" min="-2" pref="457" max="-2" attributes="0"/>
+                                  <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="ilogin_image" min="-2" pref="526" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="125" max="32767" attributes="0"/>
+                      <EmptySpace pref="57" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="35" max="32767" attributes="0"/>
-                      <Component id="tShopping_cart" min="-2" pref="53" max="-2" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <Component id="tShopping_cart" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       <Component id="ilogin_image" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -142,17 +157,7 @@
             <Component class="javax.swing.JLabel" name="ilogin_image">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Icons/login.png"/>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder>
-                      <Color PropertyName="highlightOuter" blue="ff" green="cc" red="33" type="rgb"/>
-                      <Color PropertyName="highlightInner" blue="ff" green="99" red="33" type="rgb"/>
-                      <Color PropertyName="shadowOuter" blue="ff" green="99" red="66" type="rgb"/>
-                      <Color PropertyName="shadowInner" blue="ff" green="33" red="33" type="rgb"/>
-                    </BevelBorder>
-                  </Border>
+                  <Image iconType="3" name="/Icons/login edited.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -167,6 +172,21 @@
                 <Property name="text" type="java.lang.String" value="Shopping Cart Application"/>
               </Properties>
             </Component>
+            <Container class="javax.swing.JPanel" name="jPanel5">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="447" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+            </Container>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="tUsername">
@@ -177,7 +197,7 @@
             <Property name="text" type="java.lang.String" value="Username"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="fUsername_field">
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>
@@ -233,7 +253,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="java.awt.Button" name="button1">
+        <Component class="java.awt.Button" name="bSubmit">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -247,9 +267,9 @@
             <Property name="label" type="java.lang.String" value="Submit"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+        <Component class="javax.swing.JPasswordField" name="pPassword_Field">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="ilogin_small">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Icons/login_small.png"/>

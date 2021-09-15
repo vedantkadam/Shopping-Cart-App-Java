@@ -4,11 +4,32 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
+    <Container class="javax.swing.JMenuBar" name="jMenuBar2">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenu3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edit"/>
+          </Properties>
+        </Menu>
+      </SubComponents>
+    </Container>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+    </Menu>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -32,10 +53,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="124" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -57,21 +75,16 @@
                           <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fEmail_reg" alignment="0" pref="388" max="32767" attributes="0"/>
+                                  <Component id="fEmail_reg" alignment="0" max="32767" attributes="0"/>
                                   <Component id="fName_reg" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="tGender" min="-2" pref="102" max="-2" attributes="0"/>
-                                          <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                  </Group>
                                   <Component id="fPhoneNumber_reg" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tGender" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                                   <Component id="tName" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
                                   <Component id="tPassword" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                                  <Component id="pPassword_reg" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pPassword_reg" alignment="0" min="-2" pref="388" max="-2" attributes="0"/>
                               </Group>
                               <Component id="tPhoneNumber" alignment="0" min="-2" pref="163" max="-2" attributes="0"/>
                               <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -83,15 +96,16 @@
                           <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="checkbox3" min="-2" pref="116" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="checkbox2" min="-2" pref="165" max="-2" attributes="0"/>
-                                  <Component id="checkbox1" min="-2" pref="165" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="bSubmit_reg" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
+                              <Component id="checkbox1" min="-2" pref="165" max="-2" attributes="0"/>
+                              <Component id="checkbox2" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="295" max="-2" attributes="0"/>
+                          <Component id="bSubmit_reg" min="-2" pref="158" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="326" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -121,27 +135,27 @@
                   <Component id="tPassword" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="pPassword_reg" min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="checkbox1" min="-2" pref="56" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                          <Component id="checkbox1" min="-2" pref="56" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="checkbox2" min="-2" pref="56" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Component id="tGender" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                           <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="checkbox2" min="-2" pref="56" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="checkbox3" min="-2" pref="56" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="bSubmit_reg" min="-2" pref="69" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="33" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -160,7 +174,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="245" max="-2" attributes="0"/>
                       <Component id="lRegisterNow" min="-2" pref="290" max="-2" attributes="0"/>
-                      <EmptySpace pref="275" max="32767" attributes="0"/>
+                      <EmptySpace pref="277" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -190,6 +204,7 @@
               <Font name="Times New Roman" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Name"/>
+            <Property name="toolTipText" type="java.lang.String" value="Enter your name"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="fName_reg">
@@ -200,6 +215,7 @@
               <Font name="Times New Roman" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Phone Number"/>
+            <Property name="toolTipText" type="java.lang.String" value="Enter your Phone Number"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="fEmail_reg">
@@ -242,6 +258,7 @@
               <Font name="Times New Roman" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Password"/>
+            <Property name="toolTipText" type="java.lang.String" value="Enter your Password"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="pPassword_reg">
@@ -329,21 +346,6 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="java.awt.Button" name="bSubmit_reg">
-          <Properties>
-            <Property name="actionCommand" type="java.lang.String" value="Sumbit"/>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="66" red="33" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="30" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="label" type="java.lang.String" value="Submit"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="fPhoneNumber_reg">
         </Component>
         <Component class="javax.swing.JLabel" name="tEmail">
@@ -352,6 +354,7 @@
               <Font name="Times New Roman" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Email"/>
+            <Property name="toolTipText" type="java.lang.String" value="Enter your email"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel7">
@@ -374,6 +377,21 @@
             </DimensionLayout>
           </Layout>
         </Container>
+        <Component class="java.awt.Button" name="bSubmit_reg">
+          <Properties>
+            <Property name="actionCommand" type="java.lang.String" value="Sumbit"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="66" red="33" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="30" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="label" type="java.lang.String" value="Submit"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
