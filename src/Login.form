@@ -49,32 +49,30 @@
               <Group type="102" attributes="0">
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="bSubmit" min="-2" pref="108" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pPassword_Field" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <Component id="fUsername_field" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <Component id="tUsername" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="tPassword" min="-2" pref="153" max="-2" attributes="0"/>
-                                      <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fUsername_field" min="-2" pref="254" max="-2" attributes="0"/>
+                              <Component id="tUsername" min="-2" pref="153" max="-2" attributes="0"/>
+                              <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="tPassword" min="-2" pref="153" max="-2" attributes="0"/>
+                              <Component id="jPanel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="bLogin" min="-2" pref="108" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="bRegister" min="-2" pref="108" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                                  <Component id="ilogin_small" min="-2" pref="153" max="-2" attributes="0"/>
+                                  <Component id="pPassword_Field" min="-2" pref="254" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="84" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                          <Component id="ilogin_small" min="-2" pref="153" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="84" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -96,8 +94,11 @@
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="pPassword_Field" min="-2" pref="61" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                  <Component id="bSubmit" min="-2" pref="55" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="bLogin" min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="bRegister" min="-2" pref="55" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -253,7 +254,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="java.awt.Button" name="bSubmit">
+        <Component class="java.awt.Button" name="bLogin">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="0" type="rgb"/>
@@ -264,8 +265,11 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="label" type="java.lang.String" value="Submit"/>
+            <Property name="label" type="java.lang.String" value="Login"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bLoginActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="pPassword_Field">
         </Component>
@@ -274,6 +278,20 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Icons/login_small.png"/>
             </Property>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Button" name="bRegister">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="99" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Gill Sans MT" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="label" type="java.lang.String" value="Register"/>
           </Properties>
         </Component>
       </SubComponents>
