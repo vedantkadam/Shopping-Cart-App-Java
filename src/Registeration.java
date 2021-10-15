@@ -394,6 +394,8 @@ public class Registeration extends javax.swing.JFrame {
             pt.executeUpdate();
               JOptionPane.showMessageDialog(null, "Insertion Successfully");
               con.close();
+              Welcome w =new Welcome();
+              w.setVisible(true);
     
         }
          catch(Exception e) {
