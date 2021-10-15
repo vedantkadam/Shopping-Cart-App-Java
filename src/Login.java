@@ -150,6 +150,11 @@ public class Login extends javax.swing.JFrame {
         bRegister.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
         bRegister.setForeground(new java.awt.Color(255, 255, 255));
         bRegister.setLabel("Register");
+        bRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRegisterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -237,6 +242,8 @@ public class Login extends javax.swing.JFrame {
                JOptionPane.showMessageDialog(null, "Invalid username or password","unsuccessful login",JOptionPane.ERROR_MESSAGE);
            }
            con.close();
+        Registeration r =new Registeration();
+        r.setVisible(true);
         }
          catch(Exception ex)
                    {
@@ -244,6 +251,12 @@ public class Login extends javax.swing.JFrame {
                    }
         
     }//GEN-LAST:event_bLoginActionPerformed
+
+    private void bRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRegisterActionPerformed
+        // TODO add your handling code here:
+        Registeration r =new Registeration();
+        r.setVisible(true);
+    }//GEN-LAST:event_bRegisterActionPerformed
 
     /*
      * @param args the command line arguments
