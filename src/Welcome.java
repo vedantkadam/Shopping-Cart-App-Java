@@ -36,8 +36,8 @@ public class Welcome extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        button1 = new java.awt.Button();
-        button3 = new java.awt.Button();
+        bviewmobile = new java.awt.Button();
+        bviewappliances = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,15 +72,25 @@ public class Welcome extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
         jLabel8.setText("Mobile Phones");
 
-        button1.setBackground(new java.awt.Color(51, 102, 255));
-        button1.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        button1.setForeground(new java.awt.Color(255, 255, 255));
-        button1.setLabel("View");
+        bviewmobile.setBackground(new java.awt.Color(51, 102, 255));
+        bviewmobile.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        bviewmobile.setForeground(new java.awt.Color(255, 255, 255));
+        bviewmobile.setLabel("View");
+        bviewmobile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bviewmobileActionPerformed(evt);
+            }
+        });
 
-        button3.setBackground(new java.awt.Color(51, 102, 255));
-        button3.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        button3.setForeground(new java.awt.Color(255, 255, 255));
-        button3.setLabel("View");
+        bviewappliances.setBackground(new java.awt.Color(51, 102, 255));
+        bviewappliances.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        bviewappliances.setForeground(new java.awt.Color(255, 255, 255));
+        bviewappliances.setLabel("View");
+        bviewappliances.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bviewappliancesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,7 +105,7 @@ public class Welcome extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bviewmobile, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8))))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -109,7 +119,7 @@ public class Welcome extends javax.swing.JFrame {
                                         .addGap(233, 233, 233))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(269, 269, 269)
-                                .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(bviewappliances, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(224, 224, 224)
                         .addComponent(jLabel6)))
@@ -158,10 +168,10 @@ public class Welcome extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bviewmobile, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(bviewappliances, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -178,6 +188,17 @@ public class Welcome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bviewmobileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bviewmobileActionPerformed
+        // TODO add your handling code here:
+        IPhone r=new IPhone();
+        r.setVisible(true);
+    }//GEN-LAST:event_bviewmobileActionPerformed
+
+    private void bviewappliancesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bviewappliancesActionPerformed
+        OnePlusTV r=new OnePlusTV();
+        r.setVisible(true);
+    }//GEN-LAST:event_bviewappliancesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,8 +236,8 @@ public class Welcome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button button1;
-    private java.awt.Button button3;
+    private java.awt.Button bviewappliances;
+    private java.awt.Button bviewmobile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
