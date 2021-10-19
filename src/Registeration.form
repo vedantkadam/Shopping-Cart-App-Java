@@ -249,6 +249,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="fName_reg">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI Semibold" size="24" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="tPhoneNumber">
                   <Properties>
@@ -260,6 +265,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="fEmail_reg">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI Semibold" size="24" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="tGender">
                   <Properties>
@@ -279,6 +289,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="pPassword_reg1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI Semibold" size="24" style="0"/>
+                    </Property>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pPassword_reg1ActionPerformed"/>
                   </Events>
@@ -364,6 +379,11 @@
                   </Layout>
                 </Container>
                 <Component class="javax.swing.JTextField" name="fPhoneNumber_reg">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI Semibold" size="24" style="0"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="tEmail">
                   <Properties>
@@ -437,6 +457,11 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="pPassword_reg">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI Semibold" size="24" style="0"/>
+                    </Property>
+                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pPassword_regActionPerformed"/>
                   </Events>

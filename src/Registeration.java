@@ -102,9 +102,13 @@ public class Registeration extends javax.swing.JFrame {
         tName.setText("Name");
         tName.setToolTipText("Enter your name");
 
+        fName_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+
         tPhoneNumber.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tPhoneNumber.setText("Phone Number");
         tPhoneNumber.setToolTipText("Enter your Phone Number");
+
+        fEmail_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
 
         tGender.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tGender.setText("Gender");
@@ -113,6 +117,7 @@ public class Registeration extends javax.swing.JFrame {
         tPassword.setText("Password");
         tPassword.setToolTipText("Enter your Password");
 
+        pPassword_reg1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         pPassword_reg1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pPassword_reg1ActionPerformed(evt);
@@ -171,6 +176,8 @@ public class Registeration extends javax.swing.JFrame {
             .addGap(0, 10, Short.MAX_VALUE)
         );
 
+        fPhoneNumber_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+
         tEmail.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tEmail.setText("Email");
         tEmail.setToolTipText("Enter your email");
@@ -208,6 +215,7 @@ public class Registeration extends javax.swing.JFrame {
         buttonGroup2.add(rothers);
         rothers.setText("Others");
 
+        pPassword_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         pPassword_reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pPassword_regActionPerformed(evt);
@@ -427,6 +435,7 @@ public class Registeration extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Registeration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
