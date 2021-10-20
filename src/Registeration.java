@@ -1,7 +1,9 @@
 
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.regex.*;
 import javax.swing.JOptionPane;
 
 /*
@@ -63,6 +65,8 @@ public class Registeration extends javax.swing.JFrame {
         pPassword_reg = new javax.swing.JPasswordField();
         tPassword1 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
+        errorl = new javax.swing.JLabel();
+        perror = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
 
         jMenu3.setText("File");
@@ -88,7 +92,7 @@ public class Registeration extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(245, 245, 245)
                 .addComponent(lRegisterNow, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,12 +107,27 @@ public class Registeration extends javax.swing.JFrame {
         tName.setToolTipText("Enter your name");
 
         fName_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        fName_reg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fName_regActionPerformed(evt);
+            }
+        });
 
         tPhoneNumber.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tPhoneNumber.setText("Phone Number");
         tPhoneNumber.setToolTipText("Enter your Phone Number");
 
         fEmail_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        fEmail_reg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fEmail_regActionPerformed(evt);
+            }
+        });
+        fEmail_reg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                fEmail_regKeyReleased(evt);
+            }
+        });
 
         tGender.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tGender.setText("Gender");
@@ -177,6 +196,19 @@ public class Registeration extends javax.swing.JFrame {
         );
 
         fPhoneNumber_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        fPhoneNumber_reg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fPhoneNumber_regActionPerformed(evt);
+            }
+        });
+        fPhoneNumber_reg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                fPhoneNumber_regKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                fPhoneNumber_regKeyReleased(evt);
+            }
+        });
 
         tEmail.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tEmail.setText("Email");
@@ -207,12 +239,15 @@ public class Registeration extends javax.swing.JFrame {
         });
 
         buttonGroup2.add(rmale);
+        rmale.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         rmale.setText("Male");
 
         buttonGroup2.add(rfemale);
+        rfemale.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         rfemale.setText("Female");
 
         buttonGroup2.add(rothers);
+        rothers.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         rothers.setText("Others");
 
         pPassword_reg.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
@@ -239,6 +274,12 @@ public class Registeration extends javax.swing.JFrame {
             .addGap(0, 10, Short.MAX_VALUE)
         );
 
+        errorl.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
+        errorl.setForeground(new java.awt.Color(255, 0, 0));
+
+        perror.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        perror.setForeground(new java.awt.Color(255, 0, 51));
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -246,40 +287,50 @@ public class Registeration extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(295, 295, 295)
-                        .addComponent(bSubmit_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pPassword_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel9Layout.createSequentialGroup()
-                                    .addComponent(rmale, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(rfemale, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(rothers, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(69, 69, 69))
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(fEmail_reg)
-                                    .addComponent(fName_reg)
-                                    .addComponent(fPhoneNumber_reg)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tGender, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tName, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(pPassword_reg1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(tPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(295, 295, 295)
+                                .addComponent(bSubmit_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(98, 98, 98)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(tPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(36, 36, 36)
+                                        .addComponent(perror, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(pPassword_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                            .addComponent(rmale, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(rfemale, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(rothers, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(69, 69, 69))
+                                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(fEmail_reg)
+                                            .addComponent(fName_reg)
+                                            .addComponent(fPhoneNumber_reg)
+                                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tGender, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tName, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(pPassword_reg1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(tPassword1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(tEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(errorl, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(146, 146, 146))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,13 +344,17 @@ public class Registeration extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(fName_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(errorl, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(2, 2, 2)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
                 .addComponent(fEmail_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(tPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(perror, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -336,11 +391,11 @@ public class Registeration extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1096, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE)
         );
 
         setJMenuBar(jMenuBar1);
@@ -365,6 +420,7 @@ public class Registeration extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void pPassword_reg1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pPassword_reg1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pPassword_reg1ActionPerformed
@@ -400,7 +456,7 @@ public class Registeration extends javax.swing.JFrame {
             } 
             pt.setString(6,d);
             pt.executeUpdate();
-              JOptionPane.showMessageDialog(null, "Insertion Successfully");
+              JOptionPane.showMessageDialog(null, "Registeration Successfully");
               con.close();
               Welcome w =new Welcome();
               w.setVisible(true);
@@ -409,10 +465,72 @@ public class Registeration extends javax.swing.JFrame {
          catch(Exception e) {
             JOptionPane.showMessageDialog(null,e);
     }//GEN-LAST:event_bSubmit_regActionPerformed
+    }
+    private void fName_regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fName_regActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fName_regActionPerformed
+
+    private void fEmail_regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fEmail_regActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fEmail_regActionPerformed
+
+    private void fEmail_regKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fEmail_regKeyReleased
+        // TODO add your handling code here:
+                                                      
+      String PATTERN="^[a-zA-Z0-9]{0,30}[@][a-zA-Z0-9]{0,10}[.][a-zA-Z]{0,5}$";
+      Pattern patt=Pattern.compile(PATTERN);
+      Matcher match =patt.matcher(fEmail_reg.getText());
+      if(!match.matches()){
+          errorl.setText("Email is incorrect");
+      }
+      else{
+          errorl.setText(null);
+      }
+    
+    }//GEN-LAST:event_fEmail_regKeyReleased
+
+    private void fPhoneNumber_regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fPhoneNumber_regActionPerformed
+     
+    }//GEN-LAST:event_fPhoneNumber_regActionPerformed
+
+    private void fPhoneNumber_regKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fPhoneNumber_regKeyReleased
+        // TODO add your handling code here:
+         String PATTERN="^[0-9]{0,12}$";
+      Pattern patt=Pattern.compile(PATTERN);
+      Matcher match =patt.matcher(fPhoneNumber_reg.getText());
+      if(!match.matches()){
+          perror.setText("Phone Number is incorrect");
+      }
+      else{
+          perror.setText(null);
+      }
+    }//GEN-LAST:event_fPhoneNumber_regKeyReleased
+
+    private void fPhoneNumber_regKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fPhoneNumber_regKeyPressed
+        // TODO add your handling code here:
+         String phoneNumber=fPhoneNumber_reg.getText();
+        int lenght= phoneNumber.length();
+        char c=evt.getKeyChar();
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9')
+        {
+        if(lenght<10){
+        fPhoneNumber_reg.setEditable(true);
+        }else{
+        fPhoneNumber_reg.setEditable(false);
+        }
+        }else
+        {
+        if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE){
+        fPhoneNumber_reg.setEditable(true);
+        }else{
+        fPhoneNumber_reg.setEditable(false);
+}
+    }  
+    }//GEN-LAST:event_fPhoneNumber_regKeyPressed
     
     /**
      * @param args the command line arguments
-     */}
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -450,6 +568,7 @@ public class Registeration extends javax.swing.JFrame {
     private java.awt.Button bSubmit_reg;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JLabel errorl;
     private javax.swing.JTextField fEmail_reg;
     private javax.swing.JTextField fName_reg;
     private javax.swing.JTextField fPhoneNumber_reg;
@@ -470,6 +589,7 @@ public class Registeration extends javax.swing.JFrame {
     private javax.swing.JLabel lRegisterNow;
     private javax.swing.JPasswordField pPassword_reg;
     private javax.swing.JPasswordField pPassword_reg1;
+    private javax.swing.JLabel perror;
     private javax.swing.JRadioButton rfemale;
     private javax.swing.JRadioButton rmale;
     private javax.swing.JRadioButton rothers;

@@ -244,10 +244,12 @@ public class Login extends javax.swing.JFrame {
         jlerror.setText("field(s) are Empty");
         }
         else if(fUsername_field.getText().trim().isEmpty())
-        {jlerror.setText("Username is Empty");
+        {
+            jlerror.setText("Username is Empty");
         }
         else 
-        {jlerror.setText("Password are Empty");
+        {
+            jlerror.setText("Password are Empty");
         }
         String q="select * from login where Username= ? and Password= ?";
         try{
