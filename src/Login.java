@@ -264,6 +264,8 @@ public class Login extends javax.swing.JFrame {
                JOptionPane.showMessageDialog(null, "Welcome"+fUsername_field.getText(),"Successfull login",JOptionPane.PLAIN_MESSAGE);
                 Welcome w =new Welcome();
         w.setVisible(true);
+        dispose();
+        
            }
            else
            {

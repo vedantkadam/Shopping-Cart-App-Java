@@ -1,3 +1,9 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -33,22 +39,18 @@ public class Cart extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jop1 = new javax.swing.JRadioButton();
+        jop2 = new javax.swing.JRadioButton();
+        jop3 = new javax.swing.JRadioButton();
+        jop4 = new javax.swing.JRadioButton();
         bcheckout = new java.awt.Button();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jproductselect = new javax.swing.JComboBox<>();
         bvieworder = new java.awt.Button();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        jcartwallet = new javax.swing.JRadioButton();
+        jcashod = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,57 +67,49 @@ public class Cart extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setFont(new java.awt.Font("Gill Sans MT", 1, 22)); // NOI18N
-        jLabel3.setText("Enter your Address :");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
         jLabel4.setFont(new java.awt.Font("Gill Sans MT", 1, 22)); // NOI18N
         jLabel4.setText("Select the Product :");
 
         jLabel5.setFont(new java.awt.Font("Gill Sans MT", 1, 22)); // NOI18N
         jLabel5.setText("Select the Quantity:");
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jRadioButton1.setText("1");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        jop1.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jop1);
+        jop1.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jop1.setText("1");
+        jop1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jop1ActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jRadioButton2.setText("2");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        jop2.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jop2);
+        jop2.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jop2.setText("2");
+        jop2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                jop2ActionPerformed(evt);
             }
         });
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jRadioButton3.setText("3");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        jop3.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jop3);
+        jop3.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jop3.setText("3");
+        jop3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                jop3ActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jRadioButton4.setText("4");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        jop4.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jop4);
+        jop4.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        jop4.setText("4");
+        jop4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                jop4ActionPerformed(evt);
             }
         });
 
@@ -129,7 +123,12 @@ public class Cart extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iphone", "OnePlus9", "Realme", "Lgtv", "Washing Machine", "Ac" }));
+        jproductselect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iphone", "OnePlus9", "Realme", "Lgtv", "Washing Machine", "Ac" }));
+        jproductselect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jproductselectActionPerformed(evt);
+            }
+        });
 
         bvieworder.setBackground(new java.awt.Color(0, 102, 255));
         bvieworder.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
@@ -144,33 +143,23 @@ public class Cart extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Gill Sans MT", 1, 22)); // NOI18N
         jLabel6.setText("Select Payment Options :");
 
-        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup2.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
-        jRadioButton5.setText("UPI");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        jcartwallet.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup2.add(jcartwallet);
+        jcartwallet.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
+        jcartwallet.setText("Cart Wallet");
+        jcartwallet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                jcartwalletActionPerformed(evt);
             }
         });
 
-        jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup2.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
-        jRadioButton6.setText("Net Banking");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        jcashod.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup2.add(jcashod);
+        jcashod.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
+        jcashod.setText("Cash on Delivery");
+        jcashod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup2.add(jRadioButton7);
-        jRadioButton7.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
-        jRadioButton7.setText("Cash on Delivery");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                jcashodActionPerformed(evt);
             }
         });
 
@@ -179,68 +168,58 @@ public class Cart extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(bcheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(bvieworder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jcartwallet)
+                        .addGap(18, 18, 18)
+                        .addComponent(jcashod))
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(jop1)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)
+                        .addComponent(jop2)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton4))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(bcheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(59, 59, 59)
-                            .addComponent(bvieworder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jRadioButton5)
-                                    .addGap(26, 26, 26)
-                                    .addComponent(jRadioButton6))
-                                .addComponent(jLabel6))
-                            .addGap(6, 6, 6)
-                            .addComponent(jRadioButton7))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addComponent(jop3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jop4))
+                    .addComponent(jLabel6)
+                    .addComponent(jproductselect, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
+                .addComponent(jproductselect, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel5)
-                .addGap(29, 29, 29)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
-                .addGap(34, 34, 34)
-                .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton7))
-                .addGap(21, 21, 21)
+                    .addComponent(jop1)
+                    .addComponent(jop2)
+                    .addComponent(jop3)
+                    .addComponent(jop4))
+                .addGap(33, 33, 33)
+                .addComponent(jLabel6)
+                .addGap(34, 34, 34)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jcartwallet)
+                    .addComponent(jcashod))
+                .addGap(39, 39, 39)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bcheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bvieworder, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -278,12 +257,10 @@ public class Cart extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -311,21 +288,21 @@ public class Cart extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jop1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jop1ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void jop2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_jop2ActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void jop3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_jop3ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void jop4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_jop4ActionPerformed
 
     private void bvieworderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bvieworderActionPerformed
         // TODO add your handling code here:
@@ -334,22 +311,72 @@ public class Cart extends javax.swing.JFrame {
     }//GEN-LAST:event_bvieworderActionPerformed
 
     private void bcheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcheckoutActionPerformed
-        // TODO add your handling code here:
+try{
+           Class.forName("com.mysql.jdbc.Driver");
+           Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shoppingcart_app","root","");
+           String q="insert into cart values(?,?,?)";
+           PreparedStatement pt=con.prepareStatement(q);
+           String radio="";
+           radio=jproductselect.getSelectedItem().toString();
+           pt.setString(1, radio);
+          
+           String d="";
+           if(jop1.isSelected())
+                   {      
+            d=jop1.getText();
+                   }
+            if(jop2.isSelected())
+            {
+            d=jop2.getText();
+            }  
+            if(jop3.isSelected())
+            {
+            d=jop3.getText();
+            }
+            if(jop4.isSelected())
+            {
+            d=jop4.getText();
+            } 
+            pt.setString(2,d);
+           
+            
+             String c="";
+           if(jcartwallet.isSelected())
+                   {      
+            c=jcartwallet.getText();
+                   }
+            if(jcashod.isSelected())
+            {
+            c=jcashod.getText();
+            }  
+            pt.setString(3,c);
+          
+           
+            pt.executeUpdate();
+              JOptionPane.showMessageDialog(null, "Added Successfully to Cart");
+              con.close();
+             
+    
+        }
+         catch(Exception e) {
+            JOptionPane.showMessageDialog(null,e);
+    }       
         Confirm c =new Confirm();
         c.setVisible(true);
+        dispose();
     }//GEN-LAST:event_bcheckoutActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void jcartwalletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcartwalletActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_jcartwalletActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void jcashodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcashodActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_jcashodActionPerformed
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void jproductselectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jproductselectActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+    }//GEN-LAST:event_jproductselectActionPerformed
 
     /**
      * @param args the command line arguments
@@ -391,10 +418,8 @@ public class Cart extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private java.awt.Button bvieworder;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -402,14 +427,12 @@ public class Cart extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JRadioButton jcartwallet;
+    private javax.swing.JRadioButton jcashod;
+    private javax.swing.JRadioButton jop1;
+    private javax.swing.JRadioButton jop2;
+    private javax.swing.JRadioButton jop3;
+    private javax.swing.JRadioButton jop4;
+    private javax.swing.JComboBox<String> jproductselect;
     // End of variables declaration//GEN-END:variables
 }
