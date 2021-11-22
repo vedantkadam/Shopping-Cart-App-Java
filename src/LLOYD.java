@@ -379,28 +379,34 @@ public class LLOYD extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         LG r=new LG();
-        r.setVisible(true);        
+        r.setVisible(true);    
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         OnePlusTV r=new OnePlusTV();
         r.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jbview4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview4ActionPerformed
        Cart c=new Cart();
         c.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jbview4ActionPerformed
 
     private void jbview5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview5ActionPerformed
-        // TODO add your handling code here:
+ Confirm c=new Confirm();
+        c.setVisible(true);
+         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jbview5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Welcome w=new  Welcome();
         w.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstActionPerformed

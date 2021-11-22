@@ -189,11 +189,13 @@ public class Welcome extends javax.swing.JFrame {
         // TODO add your handling code here:
         IPhone r=new IPhone();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_bviewmobileActionPerformed
 
     private void bviewappliancesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bviewappliancesActionPerformed
         OnePlusTV r=new OnePlusTV();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_bviewappliancesActionPerformed
 
     /**

@@ -362,18 +362,21 @@ public class Realme extends javax.swing.JFrame {
         // TODO add your handling code here:
         OnePlus r=new OnePlus();
         r.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         IPhone r=new IPhone();
         r.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbview3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview3ActionPerformed
         // TODO add your handling code here:
         Cart c=new Cart();
         c.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jbview3ActionPerformed
 
     private void jbview4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview4ActionPerformed
@@ -384,6 +387,7 @@ public class Realme extends javax.swing.JFrame {
         // TODO add your handling code here:
         Welcome w=new  Welcome();
         w.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstActionPerformed

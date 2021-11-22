@@ -357,29 +357,35 @@ public class IPhone extends javax.swing.JFrame {
         // TODO add your handling code here:
         OnePlus r=new OnePlus();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         Realme r=new Realme();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jbview2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview2ActionPerformed
         Cart c=new Cart();
         c.setVisible(true);
+         dispose();
+        
     }//GEN-LAST:event_jbview2ActionPerformed
 
     private void jbview3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview3ActionPerformed
         // TODO add your handling code here:
         Confirm c=new Confirm();
         c.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jbview3ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Welcome w=new  Welcome();
         w.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstActionPerformed
@@ -441,6 +447,7 @@ public class IPhone extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new IPhone().setVisible(true);
+                
             }
         });
     }

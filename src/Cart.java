@@ -308,6 +308,7 @@ public class Cart extends javax.swing.JFrame {
         // TODO add your handling code here:
         Confirm c=new Confirm();
         c.setVisible(true);
+        dispose();
     }//GEN-LAST:event_bvieworderActionPerformed
 
     private void bcheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcheckoutActionPerformed

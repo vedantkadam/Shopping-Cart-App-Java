@@ -362,24 +362,28 @@ public class OnePlusTV extends javax.swing.JFrame {
         // TODO add your handling code here:
         LLOYD r=new LLOYD();
         r.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         LG r=new LG();
         r.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jBview6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBview6ActionPerformed
         // TODO add your handling code here:
         Cart c=new Cart();
         c.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jBview6ActionPerformed
 
     private void jBview7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBview7ActionPerformed
         // TODO add your handling code here:
         Confirm  c = new Confirm();
         c.setVisible(true);
+        dispose();
         
         
         
@@ -389,6 +393,7 @@ public class OnePlusTV extends javax.swing.JFrame {
         // TODO add your handling code here:
         Welcome w=new  Welcome();
         w.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstActionPerformed

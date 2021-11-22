@@ -285,6 +285,7 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         Registeration r =new Registeration();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_bRegisterActionPerformed
 
     /*

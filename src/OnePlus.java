@@ -361,29 +361,34 @@ public class OnePlus extends javax.swing.JFrame {
         // TODO add your handling code here:
         Realme r=new Realme();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         IPhone r=new IPhone();
         r.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbview1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview1ActionPerformed
         // TODO add your handling code here:
         Cart c=new Cart();
         c.setVisible(true);
-        
+         dispose();
     }//GEN-LAST:event_jbview1ActionPerformed
 
     private void jbview2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview2ActionPerformed
-        // TODO add your handling code here:
+    Cart c=new Cart();
+    c.setVisible(true);
+    dispose();
     }//GEN-LAST:event_jbview2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Welcome w=new  Welcome();
         w.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstActionPerformed

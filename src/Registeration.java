@@ -460,6 +460,7 @@ public class Registeration extends javax.swing.JFrame {
               con.close();
               Welcome w =new Welcome();
               w.setVisible(true);
+               dispose();
     
         }
          catch(Exception e) {

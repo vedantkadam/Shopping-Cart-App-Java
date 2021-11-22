@@ -96,7 +96,7 @@ public class LG extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 609, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
@@ -360,28 +360,34 @@ public class LG extends javax.swing.JFrame {
         // TODO add your handling code here:
         OnePlusTV r=new OnePlusTV();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         LLOYD r=new LLOYD();
         r.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jBview5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBview5ActionPerformed
         // TODO add your handling code here:
         Cart c=new Cart();
         c.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jBview5ActionPerformed
 
     private void jBview6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBview6ActionPerformed
-        // TODO add your handling code here:
+        Confirm c=new Confirm();
+        c.setVisible(true);
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jBview6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Welcome w=new  Welcome();
         w.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
