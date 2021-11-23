@@ -249,7 +249,7 @@ public class Login extends javax.swing.JFrame {
         }
         else 
         {
-            jlerror.setText("Password are Empty");
+            jlerror.setText("Password is Empty");
         }
         String q="select * from login where Username= ? and Password= ?";
         try{
