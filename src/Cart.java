@@ -1,4 +1,6 @@
 
+
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -41,16 +43,13 @@ public class Cart extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jop1 = new javax.swing.JRadioButton();
-        jop2 = new javax.swing.JRadioButton();
-        jop3 = new javax.swing.JRadioButton();
-        jop4 = new javax.swing.JRadioButton();
         bcheckout = new java.awt.Button();
         jproductselect = new javax.swing.JComboBox<>();
         bvieworder = new java.awt.Button();
         jLabel6 = new javax.swing.JLabel();
-        jcartwallet = new javax.swing.JRadioButton();
-        jcashod = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        jquantity = new javax.swing.JComboBox<>();
+        jpayment = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,46 +72,6 @@ public class Cart extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Gill Sans MT", 1, 22)); // NOI18N
         jLabel5.setText("Select the Quantity:");
 
-        jop1.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jop1);
-        jop1.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jop1.setText("1");
-        jop1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jop1ActionPerformed(evt);
-            }
-        });
-
-        jop2.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jop2);
-        jop2.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jop2.setText("2");
-        jop2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jop2ActionPerformed(evt);
-            }
-        });
-
-        jop3.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jop3);
-        jop3.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jop3.setText("3");
-        jop3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jop3ActionPerformed(evt);
-            }
-        });
-
-        jop4.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jop4);
-        jop4.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jop4.setText("4");
-        jop4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jop4ActionPerformed(evt);
-            }
-        });
-
         bcheckout.setBackground(new java.awt.Color(0, 102, 255));
         bcheckout.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
         bcheckout.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,6 +82,7 @@ public class Cart extends javax.swing.JFrame {
             }
         });
 
+        jproductselect.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jproductselect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iphone", "OnePlus9", "Realme", "Lgtv", "Washing Machine", "Ac" }));
         jproductselect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,23 +103,21 @@ public class Cart extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Gill Sans MT", 1, 22)); // NOI18N
         jLabel6.setText("Select Payment Options :");
 
-        jcartwallet.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup2.add(jcartwallet);
-        jcartwallet.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
-        jcartwallet.setText("Cart Wallet");
-        jcartwallet.addActionListener(new java.awt.event.ActionListener() {
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+
+        jquantity.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jquantity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
+        jquantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcartwalletActionPerformed(evt);
+                jquantityActionPerformed(evt);
             }
         });
 
-        jcashod.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup2.add(jcashod);
-        jcashod.setFont(new java.awt.Font("Gill Sans MT", 0, 24)); // NOI18N
-        jcashod.setText("Cash on Delivery");
-        jcashod.addActionListener(new java.awt.event.ActionListener() {
+        jpayment.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jpayment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cart Wallet", "Cash On Delivery" }));
+        jpayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcashodActionPerformed(evt);
+                jpaymentActionPerformed(evt);
             }
         });
 
@@ -167,32 +125,30 @@ public class Cart extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(bcheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(bvieworder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jproductselect, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jquantity, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(bcheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jpayment, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                                .addComponent(bvieworder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(28, 28, 28))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jcartwallet)
-                        .addGap(18, 18, 18)
-                        .addComponent(jcashod))
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jop1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jop2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jop3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jop4))
-                    .addComponent(jLabel6)
-                    .addComponent(jproductselect, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,21 +157,17 @@ public class Cart extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jproductselect, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(34, 34, 34)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jop1)
-                    .addComponent(jop2)
-                    .addComponent(jop3)
-                    .addComponent(jop4))
-                .addGap(33, 33, 33)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jquantity, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
-                .addGap(34, 34, 34)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcartwallet)
-                    .addComponent(jcashod))
-                .addGap(39, 39, 39)
+                .addGap(18, 18, 18)
+                .addComponent(jpayment, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bcheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bvieworder, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -259,7 +211,7 @@ public class Cart extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -288,31 +240,12 @@ public class Cart extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jop1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jop1ActionPerformed
-
-    private void jop2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jop2ActionPerformed
-
-    private void jop3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jop3ActionPerformed
-
-    private void jop4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jop4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jop4ActionPerformed
-
     private void bvieworderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bvieworderActionPerformed
-        // TODO add your handling code here:
-        Confirm c=new Confirm();
-        c.setVisible(true);
-        dispose();
+       
     }//GEN-LAST:event_bvieworderActionPerformed
 
     private void bcheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcheckoutActionPerformed
-try{
+/*try{
            Class.forName("com.mysql.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shoppingcart_app","root","");
            String q="insert into cart values(?,?,?)";
@@ -361,23 +294,34 @@ try{
         }
          catch(Exception e) {
             JOptionPane.showMessageDialog(null,e);
-    }       
+    }   */  
+        
+        String selectedValue =jproductselect.getSelectedItem().toString();
         Confirm c =new Confirm();
+        c.jLabel3.setText(selectedValue);
+        String selectedValue1 =jquantity.getSelectedItem().toString();
+        c.quant.setText(selectedValue1);
+        String selectedValue2 =jpayment.getSelectedItem().toString();
+        c.jLabel9.setText(selectedValue2);
+        String amount="100000";
+        c.famount.setText(amount); 
+        if(c.jlabel9=="Cart Wallet")
         c.setVisible(true);
-        dispose();
+        
+         
     }//GEN-LAST:event_bcheckoutActionPerformed
-
-    private void jcartwalletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcartwalletActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcartwalletActionPerformed
-
-    private void jcashodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcashodActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcashodActionPerformed
 
     private void jproductselectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jproductselectActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jproductselectActionPerformed
+
+    private void jquantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jquantityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jquantityActionPerformed
+
+    private void jpaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpaymentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpaymentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -415,12 +359,13 @@ try{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button bcheckout;
+    public static java.awt.Button bcheckout;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private java.awt.Button bvieworder;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -428,12 +373,8 @@ try{
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jcartwallet;
-    private javax.swing.JRadioButton jcashod;
-    private javax.swing.JRadioButton jop1;
-    private javax.swing.JRadioButton jop2;
-    private javax.swing.JRadioButton jop3;
-    private javax.swing.JRadioButton jop4;
+    private javax.swing.JComboBox<String> jpayment;
     private javax.swing.JComboBox<String> jproductselect;
+    private javax.swing.JComboBox<String> jquantity;
     // End of variables declaration//GEN-END:variables
 }
