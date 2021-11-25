@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  * @author vedant kadam
  */
 public class Cart extends javax.swing.JFrame {
-
+int price1,price2;
     /**
      * Creates new form Cart
      */
@@ -303,12 +303,50 @@ public class Cart extends javax.swing.JFrame {
         c.quant.setText(selectedValue1);
         String selectedValue2 =jpayment.getSelectedItem().toString();
         c.jLabel9.setText(selectedValue2);
-        String amount="100000";
-        c.famount.setText(amount); 
-        if(c.jlabel9=="Cart Wallet")
-        c.setVisible(true);
         
-         
+        
+       
+       
+        
+        
+      
+        if(selectedValue=="Iphone"){
+          price1=129999;
+        }
+        else if(selectedValue=="OnePlus9") {
+          price1=64999;
+        }
+        else if(selectedValue=="Realme") {
+          price1=10999;
+        }
+        else if(selectedValue=="Lgtv") {
+          price1=19999;
+        }
+        else if(selectedValue=="Washing Machine") {
+          price1=19999;
+        }
+        else if(selectedValue=="Ac") {
+          price1=30999;
+        }
+        else{
+         price1=0;
+        }
+       String amt=c.quant.getText().toString();
+       int number = Integer.parseInt(amt);
+       int num1=number*price1;
+       String num2=Integer.toString(num1);
+       if(selectedValue2=="Cart Wallet"){
+          c.dynaval.setText(num2);
+       c.setVisible(true);
+        dispose(); 
+       }
+       else{
+           COD d = new COD();
+           d.setVisible(true);
+           dispose();
+       }
+      
+    
     }//GEN-LAST:event_bcheckoutActionPerformed
 
     private void jproductselectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jproductselectActionPerformed
