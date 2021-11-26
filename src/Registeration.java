@@ -658,13 +658,7 @@ String PATTERN="^[a-z A-Z 0-9 !@#$%^&*>?]{6,20}$";
     }//GEN-LAST:event_pPassword_regKeyReleased
 
     private void pPassword_reg1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pPassword_reg1KeyReleased
-String confirm=pPassword_reg.getText();
-        if(pPassword_reg1.getText()==confirm){
-            fail2.setText(null);
-        }
-        else{
-            fail2.setText("Password different.");
-        }        // TODO add your handling code here:
+   // TODO add your handling code here:
     }//GEN-LAST:event_pPassword_reg1KeyReleased
     
     /**
