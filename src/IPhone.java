@@ -370,7 +370,7 @@ public class IPhone extends javax.swing.JFrame {
     private void jbview2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview2ActionPerformed
         Cart c=new Cart();
         c.setVisible(true);
-         dispose();
+        dispose();
         
     }//GEN-LAST:event_jbview2ActionPerformed
 

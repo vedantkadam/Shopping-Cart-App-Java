@@ -305,7 +305,7 @@ int price1,price2;
         c.jLabel9.setText(selectedValue2);
         
         
-       
+        
        
         
         
@@ -335,16 +335,23 @@ int price1,price2;
        int number = Integer.parseInt(amt);
        int num1=number*price1;
        String num2=Integer.toString(num1);
-       if(selectedValue2=="Cart Wallet"){
-          c.dynaval.setText(num2);
+       c.dynaval.setText(num2);
        c.setVisible(true);
-        dispose(); 
+       dispose();
+       
+       
+       if(selectedValue2=="Cash On Delivery"){
+        c.proceed.setVisible(false);
+       
        }
-       else{
-           COD d = new COD();
-           d.setVisible(true);
-           dispose();
+       if(selectedValue2=="Cart Wallet"){
+        c.deli.setVisible(false);
+       
        }
+       
+      
+       
+           
       
     
     }//GEN-LAST:event_bcheckoutActionPerformed

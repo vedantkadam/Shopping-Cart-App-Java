@@ -391,14 +391,14 @@ public class LLOYD extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jbview4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview4ActionPerformed
-       Cart c=new Cart();
-        c.setVisible(true);
+       Cart w=new Cart();
+        w.setVisible(true);
          dispose();
     }//GEN-LAST:event_jbview4ActionPerformed
 
     private void jbview5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbview5ActionPerformed
  Confirm c=new Confirm();
-        c.setVisible(true);
+ c.setVisible(true);
          dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jbview5ActionPerformed
 
