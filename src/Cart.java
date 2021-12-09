@@ -243,7 +243,7 @@ int price1,price2;
     }//GEN-LAST:event_bvieworderActionPerformed
 
     private void bcheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcheckoutActionPerformed
-/*try{
+try{
            Class.forName("com.mysql.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shoppingcart_app","root","");
            String q="insert into cart values(?,?,?)";
@@ -252,36 +252,14 @@ int price1,price2;
            radio=jproductselect.getSelectedItem().toString();
            pt.setString(1, radio);
           
-           String d="";
-           if(jop1.isSelected())
-                   {      
-            d=jop1.getText();
-                   }
-            if(jop2.isSelected())
-            {
-            d=jop2.getText();
-            }  
-            if(jop3.isSelected())
-            {
-            d=jop3.getText();
-            }
-            if(jop4.isSelected())
-            {
-            d=jop4.getText();
-            } 
-            pt.setString(2,d);
+           String radio1="";
+            radio=jquantity.getSelectedItem().toString();
+           pt.setString(2, radio1);
            
-            
-             String c="";
-           if(jcartwallet.isSelected())
-                   {      
-            c=jcartwallet.getText();
-                   }
-            if(jcashod.isSelected())
-            {
-            c=jcashod.getText();
-            }  
-            pt.setString(3,c);
+            String radio2="";
+            radio2=jpayment.getSelectedItem().toString();
+            pt.setString(3, radio1);
+          
           
            
             pt.executeUpdate();
@@ -292,7 +270,7 @@ int price1,price2;
         }
          catch(Exception e) {
             JOptionPane.showMessageDialog(null,e);
-    }   */  
+    }    
         
         String selectedValue =jproductselect.getSelectedItem().toString();
         Confirm c =new Confirm();
