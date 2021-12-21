@@ -253,12 +253,12 @@ try{
            pt.setString(1, radio);
           
            String radio1="";
-            radio=jquantity.getSelectedItem().toString();
+           radio1=jquantity.getSelectedItem().toString();
            pt.setString(2, radio1);
            
             String radio2="";
             radio2=jpayment.getSelectedItem().toString();
-            pt.setString(3, radio1);
+            pt.setString(3, radio2);
           
           
            
