@@ -59,16 +59,4 @@ python agent.py
 3. To stop the script you can use Ctrl+C or Ctrl+Z in the command prompt
 
 ## Screenshots
-
-https://user-images.githubusercontent.com/83024561/149205774-d98a0e04-17cc-4a88-a5b8-dcaf2af240f4.mp4
-
-
-
-
-
-
-
-
-
-
 https://user-images.githubusercontent.com/83024561/149347574-324c5704-8605-48e7-ba7b-ed7db5038c8b.mp4
