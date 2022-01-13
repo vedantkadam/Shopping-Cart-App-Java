@@ -1,62 +1,66 @@
 # SE-Project
-# Snake Game with Reinforcement Learning
+# Shopping Cart Application using Java
 
-The snake game is a basic game in pygame. It startes with a random direction adn aligns a snake of length 3 in that direction. Then it starts the game with all the basic rules. 
+A shopping cart application made using Java and mysql database with a sleek UI which provides a better user experience 🛒
 
-## Rules
+## Features
 
-- Touching the walls will result in game over
-- Not eating food for too long will result in game over(Encourages eating food to survive)
-- Hitting yourself results in a game over
+- Login , Registeration Page
+- Product display with multiple images
+- dedicated cart page
+- Checkout Page
 
-## LinearQNet
+## Software Used
 
-I used a LinearQNet in pytorch to train and play the game. At the start there are random moves to promote exploration and after some time it takes all the moves given by the model.
+- Netbeans 8.2 (java ide)
+- Mysql database
+- Xampp control Panel
 
-The model gets an 11 0/1 input and it outputs 3 integers to indicate the move.
-
-The 1st layer of the model is of size 11, 2nd is a hidden layer of size 256 and the output layer is of size 3
-
-### Input
-The input consists of 11 0/1 integers. They are:
-1. danger straight(checks if there is wall or itself in front of the head)
-2. danger right(checks if there is wall or itself to the right of the head)
-3. danger left(checks if there is wall or itself to the left of the head)
-4. Move left(yes/no)
-5. Move right(yes/no)
-6. Move up(yes/no)
-7. Move down(yes/no)
-8. food is to the left of the head
-9. food is to the right of head
-10. food is above the head
-11. food is below the head
-
-### Output
-The output is of 3 0/1 integers. The combinations are:
-1. [1,0,0] - keep going straight
-2. [0,1,0] - Make a right turn
-3. [0,0,1] - Make a left turn
+## Architecture
+![image](https://user-images.githubusercontent.com/83024561/149349789-30073dd9-ccf8-4624-b0da-f82982b4de1f.png)
 
 ## Running on your PC
 Here are the steps to follow to run this on you PC:
-1. If you have conda installed then create an environment and then install all files using the following commands
+1. Clone the repository
 ```
-conda create --name <env name>
-conda activate <env name>
-conda install --file requirements.txt
+https://github.com/vedantkadam/SE-Project.git
 ```
-### OR
-1. If you have pip and virtualenv installed then create an environment and then install all files using the following commands
+
+2. After the clonning is complete, run the Login.java file
+(since it is connected to database some modifications might be needed to make app work)
 ```
-mkvirtualenv <env name>
-activate <env name>
-pip install -r requirements.txt
+login.java
 ```
-2. After the install is complete, run the agent.py file and watch the magic happen
-```
-python agent.py
-```
-3. To stop the script you can use Ctrl+C or Ctrl+Z in the command prompt
+
 
 ## Screenshots
+
+1.Login Page
+
+![image](https://user-images.githubusercontent.com/83024561/149350038-b0891c2c-6d51-4348-bdf2-f5e8501766fd.png)
+
+2. Registeration Page
+
+![image](https://user-images.githubusercontent.com/83024561/149350190-0e2ccde3-ebfe-4b6a-9efa-88b01a04bed7.png)
+
+3. Welcome Page
+
+![image](https://user-images.githubusercontent.com/83024561/149350341-142f35dd-b697-4a69-b884-ce28212d4319.png)
+
+4. Product Demo
+
+![image](https://user-images.githubusercontent.com/83024561/149350451-354017fa-7470-480a-9212-2ecaf92938c0.png)
+
+![image](https://user-images.githubusercontent.com/83024561/149350519-a25d3086-80d2-4388-bbca-86d474d66706.png)
+
+5. Order Detail Page
+
+![image](https://user-images.githubusercontent.com/83024561/149350650-7636e492-717c-49de-b9fe-a46a7d1683a2.png)
+
+6. Order Placed
+
+![image](https://user-images.githubusercontent.com/83024561/149350844-d2f1b2d1-e804-43d8-8bb1-c76c8bded87c.png)
+
+## Project Demo
+
 https://user-images.githubusercontent.com/83024561/149347574-324c5704-8605-48e7-ba7b-ed7db5038c8b.mp4
